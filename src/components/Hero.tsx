@@ -23,15 +23,15 @@ const Hero = () => {
   ];
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroBg} 
           alt="Developer workspace" 
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-20 dark:opacity-30"
         />
-        <div className="absolute inset-0 hero-gradient"></div>
+        <div className="absolute inset-0 hero-gradient opacity-90 dark:opacity-100"></div>
       </div>
 
       {/* Content */}
@@ -40,14 +40,14 @@ const Hero = () => {
           {/* Main Heading */}
           <h1 className="fade-in text-5xl md:text-7xl font-bold mb-6">
             Hi, I'm{' '}
-            <span className="text-gradient bg-gradient-to-r from-primary to-muted-foreground">
+            <span className="bg-gradient-to-r from-primary via-foreground to-primary bg-clip-text text-transparent">
               Vikash Anand
             </span>
           </h1>
 
           {/* Tagline */}
           <p className="fade-in fade-in-delay-1 text-xl md:text-2xl text-muted-foreground mb-8 font-light">
-            3rd-year Computer Science student • Frontend & DSA enthusiast
+            Full stack developer • Frontend & Backend enthusiast
           </p>
 
           {/* Description */}
