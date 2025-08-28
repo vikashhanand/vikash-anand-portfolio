@@ -248,8 +248,12 @@ const Contact = () => {
                   <p className="text-muted-foreground mb-6">
                     Download my complete CV with all details
                   </p>
-                  <Button size="lg" variant="outline" className="hover-lift" asChild>
-                    <a href="/resume.pdf" download>
+<Button size="lg" variant="outline" className="hover-lift" asChild>
+                    <a
+                      href="https://drive.google.com/file/d/1X_hNJO6i0mXiEPUmJpr6wa9tYOoyBcKY/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <Download className="h-4 w-4 mr-2" />
                       Download Resume
                     </a>
