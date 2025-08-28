@@ -15,60 +15,47 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "ATM Management System",
-      description: "Comprehensive banking simulation with user authentication, transaction processing, and account management.",
-      longDescription: "A full-featured ATM simulation system built with Java that handles user authentication, balance inquiries, cash withdrawals, deposits, and transaction history. Features secure PIN validation, account management, and comprehensive error handling.",
-      technologies: ["Java", "Object-Oriented Programming", "File I/O", "Security"],
-      githubUrl: "https://github.com/vikashhanand/atm-management",
-      liveUrl: "#",
-      featured: true,
-      icon: Database,
-      codeSnippet: `
-// Account authentication logic
-public boolean authenticateUser(String accountNumber, String pin) {
-    Account account = findAccount(accountNumber);
-    return account != null && account.validatePin(pin);
-}
-
-// Transaction processing
-public void processWithdrawal(double amount) {
-    if (balance >= amount) {
-        balance -= amount;
-        addTransaction("Withdrawal", amount);
-        updateAccountFile();
-    }
-}`
-    },
-    {
-      id: 2,
       title: "Online Book Store",
       description: "E-commerce platform for books with user management, shopping cart, and order processing capabilities.",
       longDescription: "A complete e-commerce solution for book sales featuring user registration, book catalog browsing, shopping cart functionality, and order management. Built with modern web technologies and responsive design principles.",
-      technologies: ["HTML", "CSS", "JavaScript", "Local Storage", "Responsive Design"],
+      technologies: ["React", "Node.js", "MongoDB", "Express", "JavaScript", "CSS"],
       githubUrl: "https://github.com/vikashhanand/bookstore",
       liveUrl: "#",
-      featured: false,
+      featured: true,
       icon: Globe,
       codeSnippet: `
-// Shopping cart management
+// Shopping cart management with backend integration
 class ShoppingCart {
     constructor() {
         this.items = JSON.parse(localStorage.getItem('cart')) || [];
     }
     
-    addItem(book, quantity = 1) {
+    async addItem(book, quantity = 1) {
         const existingItem = this.items.find(item => item.id === book.id);
         if (existingItem) {
             existingItem.quantity += quantity;
         } else {
             this.items.push({ ...book, quantity });
         }
+        await this.syncWithBackend();
         this.saveCart();
+    }
+    
+    async syncWithBackend() {
+        try {
+            await fetch('/api/cart', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(this.items)
+            });
+        } catch (error) {
+            console.error('Failed to sync cart:', error);
+        }
     }
 }`
     },
     {
-      id: 3,
+      id: 2,
       title: "Enhanced Professor's Dashboard",
       description: "Academic management dashboard with course tracking, student progress monitoring, and analytics.",
       longDescription: "An intuitive dashboard for academic staff to manage courses, track student progress, handle assignments, and generate reports. Features data visualization, scheduling tools, and communication interfaces.",

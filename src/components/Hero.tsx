@@ -47,7 +47,7 @@ const Hero = () => {
 
           {/* Tagline */}
           <p className="fade-in fade-in-delay-1 text-xl md:text-2xl text-muted-foreground mb-8 font-light">
-            Full stack developer • Frontend & Backend enthusiast
+            Final year Computer Science student • Full stack developer
           </p>
 
           {/* Description */}

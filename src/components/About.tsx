@@ -14,7 +14,7 @@ const About = () => {
     {
       icon: Code,
       title: "Projects",
-      description: "Built ATM Management System, Online Book Store, and Enhanced Professor's Dashboard",
+      description: "Built Online Book Store and Enhanced Professor's Dashboard with modern tech stack",
     },
     {
       icon: Trophy,
@@ -42,15 +42,16 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              I'm a passionate 3rd-year Computer Science student at Chandigarh University, 
-              deeply invested in frontend development and data structures & algorithms. 
+              I'm a passionate final year Computer Science student at Chandigarh University, 
+              specializing in full stack development and data structures & algorithms. 
               My journey in tech has been marked by continuous learning and hands-on project development.
             </p>
             
             <p className="text-lg leading-relaxed">
-              I've built comprehensive projects including an ATM Management System, 
-              an Online Book Store, and an Enhanced Professor's Dashboard, each teaching me 
-              valuable lessons about software architecture, user experience, and problem-solving.
+              I've built comprehensive projects including an Online Book Store 
+              and an Enhanced Professor's Dashboard, each teaching me valuable lessons about 
+              software architecture, user experience, and problem-solving. Currently, I'm gaining 
+              industry experience through my internship at Intel.
             </p>
 
             <p className="text-lg leading-relaxed">
